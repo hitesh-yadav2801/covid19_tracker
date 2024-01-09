@@ -20,4 +20,20 @@ class ApiServices {
       throw Exception('Error occurred while fetching world stats');
     }
   }
+
+  Future<List<dynamic>> getCountriesListApi() async {
+    var data;
+    final response = await http.get(Uri.parse(AppUrl.countriesListUrl));
+
+    try {
+      if (response.statusCode == 200) {
+        data = jsonDecode(response.body.toString());
+        return data;
+      } else {
+        throw Exception(response.statusCode);
+      }
+    } catch (e) {
+      throw Exception('Error occurred while fetching world stats');
+    }
+  }
 }

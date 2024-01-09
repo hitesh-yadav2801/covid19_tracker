@@ -16,8 +16,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.dark,
-        primarySwatch: Colors.deepPurple, // Set the primary color
-        hintColor: Colors.deepPurpleAccent, // Set the accent color
+        primarySwatch: Colors.blueGrey, // Set the primary color
+        hintColor: Colors.grey, // Set the accent color
         scaffoldBackgroundColor: Colors.grey[900],
       ),
       home: const SplashScreen(),
